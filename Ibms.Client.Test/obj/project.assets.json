@@ -400,11 +400,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\SAGA\\99 Code\\Repos\\ibms\\Ibms.Client.Test\\Ibms.Client.Test.csproj",
+      "projectUniqueName": "E:\\SAGA\\99 Code\\wids\\Ibms.Client.Test\\Ibms.Client.Test.csproj",
       "projectName": "Ibms.Client.Test",
-      "projectPath": "E:\\SAGA\\99 Code\\Repos\\ibms\\Ibms.Client.Test\\Ibms.Client.Test.csproj",
+      "projectPath": "E:\\SAGA\\99 Code\\wids\\Ibms.Client.Test\\Ibms.Client.Test.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\SAGA\\99 Code\\Repos\\ibms\\Ibms.Client.Test\\obj\\",
+      "outputPath": "E:\\SAGA\\99 Code\\wids\\Ibms.Client.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

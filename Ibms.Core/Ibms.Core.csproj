@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200102065804_2020.1.2v2.cs" />
+    <Compile Remove="Migrations\20200102065804_2020.1.2v2.Designer.cs" />
+    <Compile Remove="Migrations\20200113065809_InitialCreateSQL_Server.cs" />
+    <Compile Remove="Migrations\20200113065809_InitialCreateSQL_Server.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="IdentityServer4" Version="3.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">

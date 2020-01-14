@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,10 +15,12 @@ namespace Ibms.Core.Controllers
     public class BaseDevicesController : ControllerBase
     {
         private readonly CoreContext _context;
+        private readonly ILogger _logger;
 
-        public BaseDevicesController(CoreContext context)
+        public BaseDevicesController(CoreContext context, ILogger<BaseDevicesController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: api/BaseDevices

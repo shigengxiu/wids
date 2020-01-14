@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\SAGA\\99 Code\\Repos\\ibms\\Ibms.Core\\Ibms.Core.csproj": {}
+    "E:\\SAGA\\99 Code\\wids\\Ibms.Core\\Ibms.Core.csproj": {}
   },
   "projects": {
-    "E:\\SAGA\\99 Code\\Repos\\ibms\\Ibms.Core\\Ibms.Core.csproj": {
+    "E:\\SAGA\\99 Code\\wids\\Ibms.Core\\Ibms.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SAGA\\99 Code\\Repos\\ibms\\Ibms.Core\\Ibms.Core.csproj",
+        "projectUniqueName": "E:\\SAGA\\99 Code\\wids\\Ibms.Core\\Ibms.Core.csproj",
         "projectName": "Ibms.Core",
-        "projectPath": "E:\\SAGA\\99 Code\\Repos\\ibms\\Ibms.Core\\Ibms.Core.csproj",
+        "projectPath": "E:\\SAGA\\99 Code\\wids\\Ibms.Core\\Ibms.Core.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\SAGA\\99 Code\\Repos\\ibms\\Ibms.Core\\obj\\",
+        "outputPath": "E:\\SAGA\\99 Code\\wids\\Ibms.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

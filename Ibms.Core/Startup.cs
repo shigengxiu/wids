@@ -13,6 +13,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Ibms.Core.Hubs;
 using Ibms.Core.Models;
+using Ibms.Core.Interfaces;
+using Ibms.Core.Services;
 
 namespace Ibms.Core
 {
@@ -25,13 +27,23 @@ namespace Ibms.Core
 
         public IConfiguration Configuration { get; }
 
+        public static readonly ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => { builder.AddConsole(); });
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CoreContext>(opt =>
-               opt.UseSqlite("Data Source=ibms.core.db"));
+               opt
+               .UseLoggerFactory(MyLoggerFactory)
+               .UseSqlServer(Configuration.GetConnectionString("CoreDatabase"), options => options.EnableRetryOnFailure()));
             services.AddControllers();
             services.AddSignalR();
+
+            services.AddSingleton<ICoreService>((container) =>
+            {
+                var logger = container.GetRequiredService<ILogger<CoreService>>();
+                return new CoreService() { Logger = logger };
+            });
 
             services.AddIdentityServer(options => options.Authentication.CookieAuthenticationScheme = "Cookies")
                 .AddDeveloperSigningCredential()
@@ -49,11 +61,17 @@ namespace Ibms.Core
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
             if (env.IsDevelopment())
             {
+                logger.LogInformation("In Development environment");
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
             }
 
             app.UseHttpsRedirection();

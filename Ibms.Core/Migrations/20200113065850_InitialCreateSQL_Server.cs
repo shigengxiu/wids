@@ -2,7 +2,7 @@
 
 namespace Ibms.Core.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitialCreateSQL_Server : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,7 +11,7 @@ namespace Ibms.Core.Migrations
                 columns: table => new
                 {
                     Id = table.Column<long>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
