@@ -8,6 +8,12 @@ namespace Ibms.Core
 {
     public static class IdentityServerConfig
     {
+        public static IEnumerable<IdentityResource> IdentityResources =>
+            new IdentityResource[]
+            {
+                new IdentityResources.OpenId()
+            };
+
         public static IEnumerable<ApiResource> Apis =>
             new List<ApiResource>
             {
@@ -17,9 +23,10 @@ namespace Ibms.Core
         public static IEnumerable<Client> Clients =>
             new List<Client>
             {
+                // Server to Server Clients Define
                 new Client
                 {
-                    ClientId = "client",
+                    ClientId = "Video Management Server",
 
                     // no interactive user, use the clientid/secret for authentication
                     AllowedGrantTypes = GrantTypes.ClientCredentials,

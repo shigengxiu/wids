@@ -1,0 +1,5 @@
+Postman对Rest接口进行自动化测试
+https://blog.csdn.net/u012453843/article/details/78537040
+
+IdentityServer4 中文文档与实战（添加了PPT资料）
+https://www.cnblogs.com/stulzq/p/8119928.html

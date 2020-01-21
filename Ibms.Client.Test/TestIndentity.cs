@@ -22,7 +22,7 @@ namespace Ibms.Client.Test
             var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
             {
                 Address = disco.TokenEndpoint,
-                ClientId = "client",
+                ClientId = "Video Management Server",
                 ClientSecret = "secret",
                 Scope = "api1"
             });

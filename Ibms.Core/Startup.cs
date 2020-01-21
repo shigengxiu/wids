@@ -47,6 +47,7 @@ namespace Ibms.Core
 
             services.AddIdentityServer(options => options.Authentication.CookieAuthenticationScheme = "Cookies")
                 .AddDeveloperSigningCredential()
+                .AddInMemoryIdentityResources(IdentityServerConfig.IdentityResources)
                 .AddInMemoryApiResources(IdentityServerConfig.Apis)
                 .AddInMemoryClients(IdentityServerConfig.Clients);
 

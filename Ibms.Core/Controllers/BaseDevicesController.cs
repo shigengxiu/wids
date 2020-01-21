@@ -27,7 +27,7 @@ namespace Ibms.Core.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BaseDevice>>> GetBaseDevices()
         {
-            return await _context.BaseDevices.ToListAsync();
+            return await _context.BaseDevices.Include(device => device.Type).ToListAsync();
         }
 
         // GET: api/BaseDevices/5
